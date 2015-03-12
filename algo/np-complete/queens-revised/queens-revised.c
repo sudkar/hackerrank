@@ -121,6 +121,13 @@ void queens_revised(int n)
         printf("no result\n");
     }
 #endif
+
+    for (int i = 0; i < n; i++) {
+        free(board[i]);
+        free(illegal[i]);
+    }
+    free(board);
+    free(illegal);
 }
 
 /* Actual computation for finding positions of queens. */
